@@ -5,21 +5,21 @@
 class Nocloud < Formula
   desc "NoCloud Platform CLI"
   homepage "https://github.com/slntopp/nocloud"
-  version "0.2.2-r7"
+  version "0.2.2-r8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r7/nocloud_0.2.2-r7_Darwin_arm64.tar.gz"
-      sha256 "31b377e5699f2bb22b6f1e1281000626f237a2f10672c1ee4b17342dde4c0561"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r8/nocloud_0.2.2-r8_Darwin_arm64.tar.gz"
+      sha256 "abd1a4ec50be0097079ac311150d81d106f43fd7c004149506f7a1af677a3968"
 
       def install
         bin.install "nocloud"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r7/nocloud_0.2.2-r7_Darwin_x86_64.tar.gz"
-      sha256 "6cc72f3cc41f6ac527f326c593aa0e5e7389148ca3ae7da38a31a735ddeeec2b"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r8/nocloud_0.2.2-r8_Darwin_x86_64.tar.gz"
+      sha256 "f33be4e0636b9e6616141887dbf3c924244190a39187bc8d98eee0054a7ce45d"
 
       def install
         bin.install "nocloud"
@@ -28,17 +28,17 @@ class Nocloud < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r7/nocloud_0.2.2-r7_Linux_x86_64.tar.gz"
-      sha256 "b69c91c5f06d0d1afe8b05647b9933d1f76eb8ada7caf0aa7ec17824c422f5f4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r8/nocloud_0.2.2-r8_Linux_arm64.tar.gz"
+      sha256 "86d3a7604e9e1b347bb81e71fecf2fbd955cada083b9a84a8d82b8733299a9bf"
 
       def install
         bin.install "nocloud"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r7/nocloud_0.2.2-r7_Linux_arm64.tar.gz"
-      sha256 "577dc4a8c1a92d31fe42edb88fa32ace34d006024c5ca2823d4d488d9919fd3e"
+    if Hardware::CPU.intel?
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.2-r8/nocloud_0.2.2-r8_Linux_x86_64.tar.gz"
+      sha256 "a725579a4b35122adfe1849b84c8a2bd1d430ce139e053a27cbbffda592376d6"
 
       def install
         bin.install "nocloud"
