@@ -5,21 +5,21 @@
 class Nocloud < Formula
   desc "NoCloud Platform CLI"
   homepage "https://github.com/slntopp/nocloud"
-  version "0.2.4-r11"
+  version "0.2.4-r12"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r11/nocloud_0.2.4-r11_Darwin_x86_64.tar.gz"
-      sha256 "e648fb930a7d99db3cda36068602d6d5307dc71bb6adaa2245aa3c3673ca152c"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r12/nocloud_0.2.4-r12_Darwin_x86_64.tar.gz"
+      sha256 "0ee2816158b3dc9a19e6a311123f98a2064e2b71635c5fd6ce2d8d352a166802"
 
       def install
         bin.install "nocloud"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r11/nocloud_0.2.4-r11_Darwin_arm64.tar.gz"
-      sha256 "fb1fae26d3f941f735dca87eca1b6c4f34c68c0e9d95cc4b0f01ee3fa609f3ca"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r12/nocloud_0.2.4-r12_Darwin_arm64.tar.gz"
+      sha256 "e9381a4dab7700e65bc775cc59467326386c5aa3058f58fa7daca95c73ff5f88"
 
       def install
         bin.install "nocloud"
@@ -29,16 +29,16 @@ class Nocloud < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r11/nocloud_0.2.4-r11_Linux_x86_64.tar.gz"
-      sha256 "9415d5f799b2a60814991ca9508c94e2d22ea0a0518c37fcd599c1028eb5e117"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r12/nocloud_0.2.4-r12_Linux_x86_64.tar.gz"
+      sha256 "24265ee389a5b70e0d991422e1b3d84b30e00e99192ff3f46b562ecb5da45430"
 
       def install
         bin.install "nocloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r11/nocloud_0.2.4-r11_Linux_arm64.tar.gz"
-      sha256 "fe291adb9b39900e323ed304bf0e6831a70e64ceb3b6daf5e042baaf77dcdec7"
+      url "https://github.com/slntopp/nocloud-cli/releases/download/v0.2.4-r12/nocloud_0.2.4-r12_Linux_arm64.tar.gz"
+      sha256 "9a28053092b426f46566307b3e4fc1d277177a727b69faa7f1dc7c1de84c30a8"
 
       def install
         bin.install "nocloud"
